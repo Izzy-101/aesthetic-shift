@@ -1,31 +1,44 @@
-/* .form {
-    display: flex;
-    border-color: #4c4d4f;
-    border-style: solid;
-    flex-direction: column;
-    align-items: flex-start;
-    grid-column: 4/10;
-    grid-row: 2/5;
-}
 
-.form > input {
-    display: inline;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5, 20vh);  
-} */
+/* centering the content */
 html {
-    min-height: 100%;/* fill the screen height to allow vertical alignement */
-    display: grid; /* body is the only grid cell */
-  }
+    min-height: 100%;
+    display: grid; 
+}
 body {
     margin: auto;
- }
+}
 
-/* form { 
-    margin: auto auto; 
-    max-width: 400px;
-    height: 80vh;
-} */
+/* FORM */
+.box {
+    width: 40vw;
+    margin: 4%;    
+    border-color: #4c4d4f;
+    border-style: solid;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+span {
+    display: block;
+    font-size: 0.7em;
+    text-indent: 24px;
+}
+.radio-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+@media only screen and (max-width: 500px) {
+    .box {
+        width: 100vw;
+        margin: 0;
+    }
+
+}
+
+/* input[type=text] {
+    margin-left: auto;
+}  */

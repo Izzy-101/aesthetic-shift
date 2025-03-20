@@ -8,30 +8,36 @@
     <link rel="stylesheet" type="text/css" href="form.css">
 </head>
 <body>
-    <div class="grid form">
+    <div class="box">
         <form method="POST" class="form">
-            First Name: <input type="text" name="firstname"><br>
-            Last Name: <input type="text" name="lastname"><br>
+            First Name: <input type="text" name="firstname">
+            Last Name: <input type="text" name="lastname">
             Email: <input type="email" name="email" required><br>
-            Which color palette do you vibe with the most? <br>
-            <input type="radio" name="palette" value="Soft & Neutral">Soft & Neutral (Beige, Cream, Pastels)<br>
-            <input type="radio" name="palette" value="Dark & Moody">Dark & Moody (Black, Deep Reds, Navy)<br>
-            <input type="radio" name="palette" value="Bright & Bold">Bright & Bold (Neon, Primary Colors)<br>
-            <input type="radio" name="palette" value="Earthy & Natural">Earthy & Natural (Greens, Browns, Terracotta)<br>
-            How would you describe your aesthetic in one word?<br>
+            Which color palette do you vibe with the most? 
+            <div class="radio-group">
+                <label><input type="radio" name="palette" value="Soft & Neutral">Soft & Neutral <span>(Beige, Cream, Pastels)</span></label>
+                <label><input type="radio" name="palette" value="Dark & Moody">Dark & Moody <span>(Black, Deep Reds, Navy)</span></label>
+                <label><input type="radio" name="palette" value="Bright & Bold">Bright & Bold <span>(Neon, Primary Colors)</span></label>
+                <label><input type="radio" name="palette" value="Earthy & Natural">Earthy & Natural <span>(Greens, Browns, Terracotta)</span></label>
+            </div><br>
+            How would you describe your aesthetic in one word?
             <input type="text" name="description"><br>
-            Which style appeals to you the most? <br>
-            <input type="radio" name="style" value="Minimal & Clean">Minimal & Clean<br>
-            <input type="radio" name="style" value="Vintage & Retro">Vintage & Retro<br>
-            <input type="radio" name="style" value="Futuristic & Techy">Futuristic & Techy<br>
-            <input type="radio" name="style" value="Artsy & Eclectic">Artsy & Eclectic<br>
-            <input type="radio" name="style" value="Elegant & Sophisticated">Elegant & Sophisticated<br>
-            What kind of patterns do you prefer?<br>
-            <input type="checkbox" name="pattern">Solid colors<br>
-            <input type="checkbox" name="pattern">Geometric shapes<br>
-            <input type="checkbox" name="pattern">Floral or organic designs<br>
-            <input type="checkbox" name="pattern">Abstract or artistic<br>
-            What mood do you want an aesthetic to create?<br>
+            Which style appeals to you the most?
+            <div class="radio-group">
+                <label><input type="radio" name="style" value="Minimal & Clean">Minimal & Clean</label>
+                <label><input type="radio" name="style" value="Vintage & Retro">Vintage & Retro</label>
+                <label><input type="radio" name="style" value="Futuristic & Techy">Futuristic & Techy</label>
+                <label><input type="radio" name="style" value="Artsy & Eclectic">Artsy & Eclectic</label>
+                <label><input type="radio" name="style" value="Elegant & Sophisticated">Elegant & Sophisticated</label>
+            </div><br>
+            What kind of patterns do you prefer?
+            <div class="radio-group">
+                <label><input type="checkbox" name="pattern" value="Solid colors">Solid colors</label>
+                <label><input type="checkbox" name="pattern" value="Geometric shapes">Geometric shapes</label>
+                <label><input type="checkbox" name="pattern" value="Floral or organic designs">Floral or organic designs</label>
+                <label><input type="checkbox" name="pattern" value="Abstract or artistic">Abstract or artistic</label>
+            </div><br>
+            What mood do you want an aesthetic to create?
             <input type="text" name="mood"><br>
             <input type="submit" value="Submit!">
             <input type="reset">
