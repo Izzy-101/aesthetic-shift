@@ -22,9 +22,9 @@ body {
 #content-fill {
     display:grid;
     grid-template-rows:auto 1fr auto;
-    grid-template-columns:100%;
-    min-height:100vh; /* fallback height */
-    min-height:100svh;/* new small viewport height for modern browsers */
+    grid-template-columns: 100%;
+    min-height: 100vh; /* fallback height */
+    min-height: 100svh;/* new small viewport height for modern browsers */
 }
 
 .extra {
@@ -38,9 +38,9 @@ body {
     cursor:pointer;
     /* display:inline-block; */
     /* color:#FFF; */
-    font-size:2em;
-    border-radius:4px;
-    border:1px solid #bbb;
+    font-size: 2em;
+    border-radius: 4px;
+    border: 1px solid #bbb;
     transition: all 0.3s linear;
 }
 
@@ -220,7 +220,7 @@ ul li:hover ul.dropdown {
     transform: translate(-50%, -50%); /* Center the button */
     z-index: 10; /* Ensure button is on top */
     padding: 1.5% 12%;
-    font-size: 1.5vw;
+    font-size: clamp(8px, 2vw, 16px);
     white-space: nowrap;
 }
 
@@ -228,7 +228,7 @@ ul li:hover ul.dropdown {
 p {
     line-height: 132%;
     text-indent: 8%;
-    font-size: 1.5vw;
+    font-size: clamp(8px, 2vw, 16px);
 }
 
 .description {
@@ -309,13 +309,13 @@ p {
     justify-content: flex-start;
     /* gap: 16vw;  */
     margin: 1% 1%;
-    font-size: 2vw;
+    font-size: clamp(16px, 2vw, 24px);
 }
 
 .sec1 > p {
     text-indent: 0;
-    font-size: 64%; 
-    color: #ffffff;
+    font-size: 0.6em;
+    color: #000000;
 
 }
 .sec2 {
@@ -329,19 +329,19 @@ p {
 
 h5 {
     font-size: 100%; 
-    color: #EAE8DB;
+    color: #2b2b2d;
     margin-bottom: 2%;
 } 
 
 div.sec1 button {
     padding: 2% 4%;
     margin-top: 2%;
-    font-size: 48%;
+    font-size: 0.6em;
 }
 
 .sec2 li {
     list-style: none;
-    font-size: 72%; 
+    font-size: 0.8em; 
 }
 
 
