@@ -11,7 +11,7 @@ body {
     color: #4C4D4F;
     background-color: rgb(234, 232, 219, 0.2);
 }
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 800px) {
     body {
         width: 80vw;
     }
@@ -55,14 +55,30 @@ h1 {
 .select-group {
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    font-size: clamp(14px, 2vw, 16px);
-}
-span {
-    display: block;
-    font-size: 0.8em;
-    text-indent: 16px;
+    /* font-size: clamp(14px, 2vw, 16px); */
 }
 
+/* Centering radio-button & checkbox */
+label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 4px 16px;
+    /* margin: 0.5% 8%; */
+}
+label:has(span) {
+    margin: 4px 16px 16px 16px;
+    /* margin: 0.5% 8% 8%; */
+}
+/* Parentheses */
+span {
+    font-size: 0.7em;
+    text-indent: 16px;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -16px;
+}
+/* Custom Radio */
 input[type="radio"] {
     appearance: none;
     width: 16px;
@@ -72,13 +88,15 @@ input[type="radio"] {
     outline: none;
     background-color: white;
     cursor: pointer;
+    margin: 0 4px 0 0;
+    flex-shrink: 0;
 }
 input[type="radio"]:checked {
     background-color: rgb(214, 198, 180, 0.8);
     border: 2px solid rgb(125, 115, 104, 0.5);
 
 }
-
+/* Custom Checkbox */
 input[type="checkbox"] {
     appearance: none; /* Remove default checkbox styles */
     background-color: white;
@@ -87,9 +105,10 @@ input[type="checkbox"] {
     height: 16px;
     border: 2px solid rgba(125, 115, 104, 0.5);
     border-radius: 3px;
-    margin: 3px 5px 0px 3px; 
     position: relative;
     cursor: pointer;
+    margin: 0 4px 0 0;
+    flex-shrink: 0;
 }
 
 /* When checkbox is checked */
@@ -128,6 +147,7 @@ input[type="email"]:focus {
     border: none;
     border-bottom: 2px solid rgba(214, 198, 180);
 }
+/* Overriding Autofill */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -147,6 +167,7 @@ input[type="reset"] {
     border-bottom: 2px solid rgb(125, 115, 104, 0.5);
     background-color: rgb(214, 198, 180, 0.8);
 }
+
 /* 
 #EAE8DB -light
 #D6C6B4 -meduim
