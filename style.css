@@ -25,7 +25,34 @@ body {
     min-height: 100vh; /* fallback height */
     min-height: 100svh;/* new small viewport height for modern browsers */
 }
+section {
+    position: relative;
+}
 
+/* BACKGROUND ICONS */
+.icons {
+    opacity: 0.5;
+    height: 16%;
+    width: 8%;
+}
+#icon1 {
+    position: absolute;
+    transform: rotate(30deg);
+    top: 16%;
+    left: 4%;
+}
+#icon2 {
+    position: absolute;
+    transform: rotate(-45deg);
+    bottom: 0;
+    left: 8%;
+}
+#icon3 {
+    position: absolute;
+    right: 4%;
+    top: 48%;
+    transform: rotate(60deg);
+}
 .zone {
     /* padding:30px 50px;
     margin:40px 60px; */
@@ -124,12 +151,10 @@ ul {
     list-style: none;
     background: #EAE8DB;
 }
-
 ul li {
     display: inline-block;
     position: relative;
 }
-
 ul li a {
     display: block;
     /* padding: 8px 16px; */
@@ -139,12 +164,9 @@ ul li a {
     text-decoration: none;
     text-align: center;
 }
-
 ul li ul.dropdown li {
     display: block;
-
 }
-
 ul li ul.dropdown {
     width: 100%;
     background: #EAE8DB;
@@ -153,11 +175,9 @@ ul li ul.dropdown {
     display: none;
     font-size: 0.8em;
 }
-
 ul li a:hover {
     background: #e2dcb4;
 }
-
 ul li:hover ul.dropdown {
     display: block;
     padding: 0;
