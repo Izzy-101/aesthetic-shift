@@ -16,7 +16,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #4C4D4F;
     background-color: #EAE8DB;
-    /* font-family: georgia, times, serif; */
 }
 #content-fill {
     display:grid;
@@ -27,8 +26,13 @@ body {
 }
 section {
     position: relative;
+    /* height: 60vw; */
 }
-
+img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
 /* BACKGROUND ICONS */
 .icons {
     opacity: 0.5;
@@ -44,7 +48,7 @@ section {
 #icon2 {
     position: absolute;
     transform: rotate(-45deg);
-    bottom: 0;
+    bottom: 8%;
     left: 8%;
 }
 #icon3 {
@@ -73,7 +77,7 @@ section {
 .shadow {
     /* display:inline-block; */
     /* color:#FFF; */
-    font-size:2em;
+    /* font-size:2em; */
     border-radius:4px;
     border:1px solid #bbb;
     transition: all 0.3s linear;
@@ -91,14 +95,14 @@ section {
     background: -ms-linear-gradient(top, #7D7368 0%, #D6C6B4 100%); /* IE10+ */
     background: linear-gradient(to bottom, #7D7368 0%, #D6C6B4 100%); /* W3C */
 }
-.light-brown {
+.gradient-btn {
     background: rgb(234, 232, 219); /* Fallback color */
-    background: -moz-linear-gradient(top, rgba(234, 232, 219, 0.84) 0%, rgba(214, 198, 180, 0.74) 80%); /* Firefox */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(234, 232, 219, 0.84)), color-stop(80%, rgba(214, 198, 180, 0.74))); /* Chrome, Safari */
-    background: -webkit-linear-gradient(top, rgba(234, 232, 219, 0.84) 0%, rgba(214, 198, 180, 0.74) 80%); /* Chrome 10+, Safari 5.1+ */
-    background: -o-linear-gradient(top, rgba(234, 232, 219, 0.84) 0%, rgba(214, 198, 180, 0.74) 80%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(234, 232, 219, 0.84) 0%, rgba(214, 198, 180, 0.74) 80%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(234, 232, 219, 0.84) 0%, rgba(214, 198, 180, 0.74) 80%); /* Standard */
+    background: -moz-linear-gradient(top, rgba(234, 232, 219) 0%, rgba(214, 198, 180) 80%); /* Firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(234, 232, 219)), color-stop(80%, rgba(214, 198, 180))); /* Chrome, Safari */
+    background: -webkit-linear-gradient(top, rgba(234, 232, 219) 0%, rgba(214, 198, 180) 80%); /* Chrome 10+, Safari 5.1+ */
+    background: -o-linear-gradient(top, rgba(234, 232, 219) 0%, rgba(214, 198, 180) 80%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(234, 232, 219) 0%, rgba(214, 198, 180) 80%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(234, 232, 219) 0%, rgba(214, 198, 180) 80%); /* Standard */
 }
 .light {
     background: #EAE8DB; /* Old browsers */
@@ -122,14 +126,16 @@ section {
 .main-nav {
     display: flex;
     list-style: none;
-    font-size: 0.6em;
+    /* font-size: 0.6em; */
+    font-size: clamp(16px, 2vw, 20px);
     margin: 0;
 }
 
+/* maybe delete */
 @media only screen and (max-width: 600px) {
     .main-nav{
-        font-size: 0.5em;
-        padding: 0;
+        /* font-size: 0.5em; */
+        /* padding: 0; */
     }
 }
 
@@ -144,7 +150,7 @@ a {
     text-decoration: none;
 }
 li {
-    color: rgb(76, 77, 79, 0.9);
+    color: rgb(76, 77, 79, 0.9); /* Maybe add to the style change******/
 }
 /* DROPDOWN */
 ul {
@@ -182,59 +188,58 @@ ul li:hover ul.dropdown {
     display: block;
     padding: 0;
 }
-
 /* COVER */
 .container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40vh;
-    position: relative;
-    background-color: white;
+    object-fit: contain;
+}
+h1 {
+    position: absolute;
+    z-index: 10;
+    font-size: clamp(32px, 4vw, 40px);
+    color: #EAE8DB;
 }
 /* BUTTON */
-.overlay-btn {
+#overlay-btn {
     position: absolute;
-    top: 100%; /* Adjust as needed based on section heights */
+    top: 100%; 
     left: 50%;
     transform: translate(-50%, -50%); /* Center the button */
     z-index: 10; /* Ensure button is on top */
     padding: 1.5% 10%;
     font-size: clamp(16px, 2vw, 24px);
+    font-family: inherit;
     white-space: nowrap;
-
     color: rgb(76, 77, 79, 0.89);
-    /* font-weight: bold; */
     border: none;
     border-bottom: 2px solid #7D7368;
-    background: linear-gradient(rgba(234, 232, 219, 0.84), rgb(214, 198, 180, .74) 80%);
-    background-color: rgb(234, 232, 219);
 }
 
 /* DESCRIPTION */
-p {
-    line-height: 132%;
-    text-indent: 8%;
-    font-size: clamp(8px, 2vw, 16px);
-}
-
 .description {
     padding: 6% 0% 0% 0%;
     width: 60%;
     margin: 0 auto; /* center text*/
     text-align: center;
+    line-height: 132%;
+    /* text-indent: 8%; delete? */
+    font-size: clamp(8px, 2vw, 16px);
 }
  
 /* IMAGES */
 .container1 { 
     display: grid; 
-    grid-template-columns: repeat(12, 1fr); /* 12 equal columns */ 
+    grid-template-columns: repeat(12, 1fr); 
     grid-template-rows: repeat(4, 1fr);
     column-gap: 8%; 
     row-gap: 4%;
     max-width: 1200px; /* Prevents the grid from being too wide */ 
     max-height: 400px;
-    margin: 4% auto; /* Centers the grid on the page */ 
+    margin: 4% auto 8% auto; /* Centers the grid on the page */ 
     height: auto;
 }
 .pic1 {
@@ -248,61 +253,37 @@ p {
     grid-row: 1/-1;
     max-height: 24vw;
     transform: rotate(4deg);
-
 } 
-
-
-/* @media only screen and (max-width: 768px) {
-    .container1 {
-        height: 280px;
-    }
-}
-
-@media only screen and (max-width: 616px) {
-    .container1 {
-        height: 160px;
-    } 
-} */
-/* GRID */
-/* .grid-wrapper {
-    display: grid;
-    grid-gap: 10%;
-    padding: 2% 20%;
-    grid-template-columns: 1fr 1fr;
-} */
-
  .box > img {
+    position: relative;
     width: 100%;
     height: 100%;
     aspect-ratio: 3/4;
- }
-
+    opacity: 1;
+}
  .box {
     background-color: #f6f1f1;
     padding: 4% 4% 16% 4%;
 }
 
-/* margin: 70px; */
-    /* grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(500px, 1fr)); */
-
-
-
 /* FOOTER */
-
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    /* gap: 16vw;  */
     margin: 2% 2%;
-    font-size: clamp(16px, 2vw, 24px);
+    font-size: clamp(16px, 4vw, 32px);
 }
 
+h2 {
+    color: rgb(234, 232, 219);
+    margin-bottom: 2%;
+    font-size: inherit;
+} 
 .sec1 > p {
     text-indent: 0;
-    /* font-size: 0.6em; */
-    line-height: 1.6;
+    line-height: 150%;
+    font-size: 0.6em;
     color: #494a4b;
 }
 .sec2 {
@@ -320,14 +301,7 @@ p {
 .divider {
     width: 144%
 }
-
-h2 {
-    color: rgb(234, 232, 219);
-    /* color: #2b2b2d; */
-    margin-bottom: 2%;
-} 
-
-div.sec1 button {
+.sec1 button {
     padding: 2% 4%;
     margin-top: 2%;
     font-size: clamp(8px, 2vw, 16px);
