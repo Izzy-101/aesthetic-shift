@@ -1,0 +1,55 @@
+body {
+    color: #6b5949;
+    background-color: #f5ecd9;
+    font-family: georgia, times, serif;
+}
+.gradient-btn {
+    background: rgb(243, 234, 194); /* Fallback color */
+    background: -moz-linear-gradient(top, rgba(243, 234, 194) 0%, rgb(178, 160, 145) 100%); /* Firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(243, 234, 194)), color-stop(80%, rgba(124, 102, 84))); /* Chrome, Safari */
+    background: -webkit-linear-gradient(top, rgba(243, 234, 194) 0%, rgb(178, 160, 145) 100%); /* Chrome 10+, Safari 5.1+ */
+    background: -o-linear-gradient(top, rgba(243, 234, 194) 0%, rgb(178, 160, 145) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(243, 234, 194) 0%, rgb(178, 160, 145) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(243, 234, 194) 0%, rgb(178, 160, 145) 100%); /* Standard */
+}
+/* DROPDOWN */
+li {
+    color: #7c6654; 
+}
+ul {
+    background: #F5ECD9;
+}
+ul li ul.dropdown {
+    background: #F5ECD9;
+}
+ul li a:hover {
+    background: #efe0c1;
+}
+/* COVER */
+h1 {
+    color: #f5ecd9;
+}
+/* BUTTON */
+#overlay-btn {
+    color: #ffffff;
+    border-bottom: 2px solid #7c6654;
+}
+/* FOOTER */
+.gradient-ft {
+    background: #7c6654; /* Old browsers */
+    background: -moz-linear-gradient(top, #7c6654 0%, #D6C6B4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7c6654), color-stop(100%, #D6C6B4)); /* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(top, #7c6654 0%, #D6C6B4 100%); /* Chrome10+, Safari5.1+ */
+    background: -o-linear-gradient(top, #7c6654 0%, #D6C6B4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7c6654 0%, #D6C6B4 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #7c6654 0%, #D6C6B4 100%); /* W3C */
+}
+h2 {
+    color: #f5ecd9;
+}
+.sec1 > p {
+    color: #43372e;
+}
+.sec1 button {
+    color: #ffffff;
+}
