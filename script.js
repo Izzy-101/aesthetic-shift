@@ -1,15 +1,14 @@
 
 //select elements that can't be changed with css overide
 const styleSheet = document.querySelectorAll('link[rel="stylesheet"]')[1];
-let icon1 = document.getElementById("icon1");
-let icon2 = document.getElementById("icon2");
-let icon3 = document.getElementById("icon3");
-let paragraph = document.getElementById("para");
-let button = document.getElementById("overlay-btn");
-let cover = document.querySelector('img[src="img/cover-neutral.avif"]');
-let h1 = document.querySelector('h1');
-let pic1 = document.querySelector('img[src="img/pic1-neutral.avif"]');
-let pic2 = document.querySelector('img[src="img/pic2-neutral.jpg"]');
+
+const [icon1, icon2, icon3, paragraph, button] = 
+    ['icon1','icon2','icon3','para','overlay-btn'].map(id => document.getElementById(id));
+
+const [cover, h1, pic1, pic2] = 
+    ['img[src="img/cover-neutral.avif"]',
+    'h1','img[src="img/pic1-neutral.avif"]',
+    'img[src="img/pic2-neutral.jpg"]'].map(select => document.querySelector(select));
 
 button.addEventListener("click", function ( ) {
     styleSheet.setAttribute("href", "vintage.css");
