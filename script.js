@@ -1,4 +1,4 @@
-
+let btnCount = -1;
 //select elements that can't be changed with css overide
 const styleSheet = document.querySelectorAll('link[rel="stylesheet"]')[1];
 
@@ -9,18 +9,53 @@ const [cover, h1, pic1, pic2] =
     ['img[src="img/cover-neutral.avif"]',
     'h1','img[src="img/pic1-neutral.avif"]',
     'img[src="img/pic2-neutral.jpg"]'].map(select => document.querySelector(select));
+    
+const vintage = {
+    styleSheet: [styleSheet,["href", "vintage.css"]], 
+    cover: [cover,["src", "img/cover-vintage.jpg"]], 
+    pic1: [pic1,["src", "img/pic1-vintage.jpeg"]], 
+    pic2: [pic2,["src", "img/pic2-vintage.jpeg"]], 
+    icon1: [icon1,["src","img/icon1-vintage.png"]], 
+    icon2: [icon2,["src","img/icon2-vintage.png"]], 
+    icon3: [icon3,["src","img/icon3-vintage.png"]],
+    textContent: ["Vintage","The vintage aesthetic is inspired by styles from past decades—usually anywhere from the 1920s to the 1980s. It’s all about bringing a nostalgic feel through muted colors, retro patterns, and old-school design elements like classic fonts, worn textures, and antique-inspired details. This style often feels warm and familiar. It captures the charm of the past and gives it a soft, stylish twist for today."]
+}
+const neutral = {
+    styleSheet: [styleSheet,["href", "style.css"]], 
+    cover: [cover,["src", "img/cover-neutral.avif"]], 
+    pic1: [pic1,["src", "img/pic1-neutral.avif"]], 
+    pic2: [pic2,["src", "img/pic2-neutral.jpg"]], 
+    icon1: [icon1,["src","img/icon1-neutral.png"]], 
+    icon2: [icon2,["src","img/icon2-neutral.png"]], 
+    icon3: [icon3,["src","img/icon3-neutral.png"]],
+    textContent: ["Neutral","Aesthetic Shift is a dynamic and interactive website that allows users to instantly change its entire visual style with the click of a button. Whether you're in the mood for a sleek modern look, a cozy vintage vibe, or a playful pastel theme, Aesthetic Shift seamlessly transforms its design to match."]  
+}
 
-button.addEventListener("click", function ( ) {
-    styleSheet.setAttribute("href", "vintage.css");
-    cover.setAttribute("src", "img/cover-vintage.jpg");
-    h1.textContent = 'Vintage';
-    paragraph.textContent = "The vintage aesthetic is inspired by styles from past decades—usually anywhere from the 1920s to the 1980s. It’s all about bringing a nostalgic feel through muted colors, retro patterns, and old-school design elements like classic fonts, worn textures, and antique-inspired details. This style often feels warm and familiar. It captures the charm of the past and gives it a soft, stylish twist for today.";
-    pic1.setAttribute("src", "img/pic1-vintage.jpeg");
-    pic2.setAttribute("src", "img/pic2-vintage.jpeg");
-    icon1.setAttribute("src", "img/icon1-vintage.png");
-    icon2.setAttribute("src", "img/icon2-vintage.png");
-    icon3.setAttribute("src", "img/icon3-vintage.png");
-});
+const aestheticArry = [vintage, neutral];
+
+//Select an aesthetic from the aestheticArry
+const aesthetics = () => {
+    if(btnCount === aestheticArry.length) {
+        btnCount = -1;
+    } else {
+        btnCount+=1;
+        return aestheticArry[btnCount];
+    }
+}
+
+const aestheticShift = () => {
+    let currentAesthetic = aesthetics();
+    for (const tag in currentAesthetic) {
+            if(tag !== 'textContent') {
+                currentAesthetic[tag][0].setAttribute(currentAesthetic[tag][1][0], currentAesthetic[tag][1][1]);
+            } else {
+                h1.textContent = currentAesthetic[tag][0];
+                paragraph.textContent = currentAesthetic[tag][1];
+            }
+    }
+}
+
+button.addEventListener("click", aestheticShift);
 
 
 
