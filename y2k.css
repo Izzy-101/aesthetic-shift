@@ -1,0 +1,80 @@
+body {
+    color: #ffffff;
+    background-color: #cabbf5;
+}
+  
+.gradient-btn {
+    background: rgb(250, 45, 183); /* Fallback color */
+    background: -moz-linear-gradient(top, rgb(250, 45, 183) 0%, rgb(44, 246, 246) 100%); /* Firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(250, 45, 183)), color-stop(100%, rgb(44, 246, 246))); /* Chrome, Safari */
+    background: -webkit-linear-gradient(top, rgb(250, 45, 183) 0%, rgb(44, 246, 246) 100%); /* Chrome 10+, Safari 5.1+ */
+    background: -o-linear-gradient(top, rgb(250, 45, 183) 0%, rgb(44, 246, 246) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgb(250, 45, 183) 0%, rgb(44, 246, 246) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgb(250, 45, 183) 10%, rgb(44, 246, 246) 100%); /* Standard */
+}
+/* DROPDOWN */
+.sticky {
+    border-color: #34e3fd;
+}
+li {
+    color: #ffffff; 
+}
+ul {
+    background: #8a2be2;
+}
+ul li ul.dropdown {
+    background: #8a2be2;
+}
+ul li a:hover {
+    background: #fa2db7;
+}
+/* COVER */
+h1 {
+    color: #ffffff;
+    font-size: clamp(40px, 4vw, 56px);
+}
+img {
+    opacity: 1;
+}
+/* BUTTON */
+#overlay-btn {
+    color: #ffffff;
+    border-bottom: 2px solid #8a2be2;
+}
+#icon1 {
+    transform: rotate(20deg);
+}
+#icon3 {
+    transform: rotate(0deg);
+}
+/* FOOTER */
+.gradient-ft {
+    background: #ca91ff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ca91ff 0%, #ff9bdb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ca91ff), color-stop(100%, #ff9bdb)); /* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(top, #ca91ff 0%, #ff9bdb 100%); /* Chrome10+, Safari5.1+ */
+    background: -o-linear-gradient(top, #ca91ff 0%, #ff9bdb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ca91ff 0%, #ff9bdb 100%); /* IE10+ */
+    background: linear-gradient(to bottom, 	#ca91ff 0%, 	#ff9bdb 100%); /* W3C */
+}
+h2 {
+    color: #ffffff;
+}
+.sec1 > p {
+    color: #4f677e;
+}
+.sec1 button {
+    color: #ffffff;
+}
+/* FONTS */
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.orbitron-y2k {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
